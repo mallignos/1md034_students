@@ -1,0 +1,105 @@
+/* Comment like this */
+
+@import url('https://fonts.googleapis.com/css?family=Major+Mono+Display|Oswald');
+
+@media screen and (max-width: 800px) {
+    h1 {
+        font-size: 6vw;
+    }
+}
+
+body {
+	font-family: 'Oswald', sans-serif;
+	font-size: 1.3em;
+}
+
+h1 {
+	font-family: 'Major Mono Display', serif;
+	font-size: 2.2em;
+}
+
+h2 {
+	font-family: 'Major Mono Display', serif;
+	font-size: 2em;
+	/*font-family: papyrus;*/
+}
+
+#table_headers {
+	font-family: 'arial',serif;
+	font-size: 1.5em;
+}
+
+#best {
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+#burger_select {
+	background: rgb(0,0,0); /*black*/
+	color: white; /*rgb(255,255,255)*/
+	border: 0.15em dotted white;
+	padding: 1.8em;
+}
+
+#delivery_address {
+	padding: 1.8em;
+	border: 0.15em dotted black;
+}
+
+#delivery_address button:hover {
+	background-color: lightblue;
+    cursor: pointer;
+}
+
+#burger_select #box_table {
+	text-align: center;
+	width: 60%;
+}
+
+#burger_select #box_table ul {
+	display: inline-block;
+	text-align: left;
+}
+
+section {
+	margin: 2.5em;
+}
+
+header {
+	margin: 2.5em;
+	height: 15em;
+	overflow: hidden;
+
+}
+
+header h1 {
+	position: absolute;
+	margin-top: -19.5em;
+}
+
+header img {
+	opacity: 0.5;
+	width: 100%;
+	height: auto;
+	position: relative;
+	top:-29em;
+}
+
+#box_table img {
+	width:100%;
+	height: auto;
+}
+
+.wrapper {
+     display: grid;
+     grid-gap: 0.3em;
+     grid-template-columns: 17em 17em 17em;
+ }
+
+.box {
+     border-radius: 0.3em;
+     margin-left: 1em;
+     padding: 0em;
+}
+
+

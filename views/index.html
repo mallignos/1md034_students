@@ -1,10 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>DELI-VERY</title>
-    </head>
-    <body>
-        <h1>Hello World!!!</h1>
-        <a href="/map" target="_blank">Open map in new window</a>.
-    </body>
+	<head>
+		<title>BurgerOnline</title>
+		<meta charset="utf-8"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	<body>
+		<!-- Comments look like this -->
+		<header>
+			<img src="https://static.standard.co.uk/s3fs-public/thumbnails/image/2018/04/20/17/rosewood-london.jpg?width=1000&height=614&fit=bounds&format=pjpg&auto=webp&quality=70&crop=16:9,offset-y0.5">
+			<h1>Välkommen till BurgerOnline</h1>
+		</header>
+		<main>
+			<section id="burger_select">
+				<h2>Välj din burgare!</h2>
+				<p>
+					Dagens Goda Burgare, redo för att levereras till dig!
+				</p>
+				<div id="box_table" class="wrapper">
+					<div id="table_headers" class="box a1">Dagens Special</div>
+					<div id="table_headers" class="box b1">Gårdagens Special</div>
+					<div id="table_headers" class="box c1">Morgondagens Special</div>
+
+					<div class="box a2">
+						<img src="https://www.thespruceeats.com/thmb/ivY7T2DRygJN2nHwAFYqVxfbvs4=/3000x2000/filters:no_upscale():max_bytes(150000):strip_icc()/Hamburger-Hot-Dog-58add5f03df78c345bdef6ff.jpg">
+					</div>
+					<div class="box b2">
+						<img src="https://www.canadianbusiness.com/wp-content/uploads/2013/04/oldhamburger.jpg">
+					</div>
+					<div class="box c2">
+						<img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Cow_female_black_white.jpg">
+					</div>
+
+					<div class="box a3">
+						<ul>
+							<li>De <span id="best">bästa</span> ingredienserna</li>
+							<li>Vi lade till extra <span id="best">Gluten</span></li>
+							<li>500 kcal</li>
+						</ul>
+					</div>
+					<div class="box b3">
+						<ul>
+							<li>Hittades på <span id=best>golvet</span></li>
+							<li>Lite <span id="best">fuktig</span></li>
+							<li>250 kcal</li>
+						</ul>
+					</div>
+					<div class="box c3">
+						<ul>
+							<li>110% <span id="best">Fräsh</span></li>
+							<li>Levereras Imorgon</li>
+							<li>&infin; kcal</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<section id = "delivery_address">
+				<h2>Din Leveransaddress</h2>
+				<form>
+					<p>
+					    <label for="firstname">Förnamn</label><br>
+					    <input type="text" id="firstname" name="fn" required="required" placeholder="John">
+					</p>
+					<p>
+					    <label for="lastname">Efternamn</label><br>
+					    <input type="text" id="lastname" name="ln" placeholder="Smith">
+					</p>
+					<p>
+						<label for="email">E-post</label><br>
+					    <input type="email" id="email" name="em" required="required" placeholder="john.smith@jsmith.com">
+					</p>
+					<p>
+						<label for="address">Address</label><br>
+					    <input type="text" id="adress" name="ad" required="required" placeholder="John Smith Street 44">
+					</p>
+					<p>
+						<label for="city">Ort</label><br>
+					    <input type="text" id="city" name="ct" required="required" placeholder="John Smith City">
+					</p>
+					<p>
+					    <label for="payment_op">Betalningsalternativ</label><br>
+					    <select id="payment_op" name="pop">
+					    	<option selected="selected">Betalkort</option>
+					        <option>Rent Guld</option>
+					        <option>Flaskkapsyler</option>
+					        <option>Diskning</option>
+					        <option>Blod</option>
+					    </select>
+					</p>
+					<p>
+						<label>Vilken är din favoritfärg?</label>
+						<div>
+						  <input type="radio" id="cred" name="fav_color" value="cred" required="required">
+						  <label for="cred">Röd</label>
+						</div>
+						<div>
+						  <input type="radio" id="cblue" name="fav_color" value="cblue">
+						  <label for="cblue">Blå</label>
+						</div>
+						<div>
+						  <input type="radio" id="cgreen" name="fav_color" value="cgreen">
+						  <label for="cgreen">Grön</label>
+						</div>
+						<div>
+						  <input type="radio" id="crainbow" name="fav_color" value="crainbow">
+						  <label for="crainbow">Rainbow</label>
+						</div>
+						<div>
+						  <input type="radio" id="cyes" name="fav_color" value="cyes">
+						  <label for="cyes">Ja</label>
+						</div>
+						<div>
+						  <input type="radio" id="ccow" name="fav_color" value="ccow">
+						  <label for="ccow">En ko</label>
+						</div>
+					</p>
+					<p>
+						<button type="submit"><img src="https://openclipart.org/download/220795/Bat-Silhouette.svg"> Send Info</button>
+					</p>
+				</form>
+			</section>
+	 
+		</main>
+		<footer>
+			<hr>
+			&copy;Copyright 1969 lolololol.
+		</footer>
+	</body>
 </html>
