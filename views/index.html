@@ -2,6 +2,10 @@
 <!-- Author: Mattias Aronsson Adler, maad9978 -->
 <html lang="en">
 	<head>
+		<script type="text/javascript" src="js/menu.js" defer></script>
+		<script src="js/js_script.js" defer></script>
+		<script src="https://vuejs.org/js/vue.js" defer></script> 
+		<script src="js/vue_script.js" defer></script>  
 		<title>BurgerOnline</title>
 		<meta charset="utf-8"/>
 		<link rel="stylesheet" type="text/css" href="css/style.css">
@@ -17,41 +21,23 @@
 				<p>
 					Dagens Goda Burgare, redo för att levereras till dig!
 				</p>
-				<div id="box_table" class="wrapper">
-					<div id="table_headers" class="box a1">Dagens Special</div>
-					<div id="table_headers" class="box b1">Gårdagens Special</div>
-					<div id="table_headers" class="box c1">Morgondagens Special</div>
-
-					<div class="box a2">
-						<img src="https://www.thespruceeats.com/thmb/ivY7T2DRygJN2nHwAFYqVxfbvs4=/3000x2000/filters:no_upscale():max_bytes(150000):strip_icc()/Hamburger-Hot-Dog-58add5f03df78c345bdef6ff.jpg">
-					</div>
-					<div class="box b2">
-						<img src="https://www.canadianbusiness.com/wp-content/uploads/2013/04/oldhamburger.jpg">
-					</div>
-					<div class="box c2">
-						<img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Cow_female_black_white.jpg">
-					</div>
-
-					<div class="box a3">
-						<ul>
-							<li>De <span id="best">bästa</span> ingredienserna</li>
-							<li>Vi lade till extra <span id="best">Gluten</span></li>
-							<li>500 kcal</li>
-						</ul>
-					</div>
-					<div class="box b3">
-						<ul>
-							<li>Hittades på <span id=best>golvet</span></li>
-							<li>Lite <span id="best">fuktig</span></li>
-							<li>250 kcal</li>
-						</ul>
-					</div>
-					<div class="box c3">
-						<ul>
-							<li>110% <span id="best">Fräsh</span></li>
-							<li>Levereras Imorgon</li>
-							<li>&infin; kcal</li>
-						</ul>
+				<div id='vue_wrapper' class='wrapper' style='display:none;'>
+					<div v-for="b in burgers" class='burger_item'>
+						<div class='table_header'>
+							{{ b.arr()[0] }}
+						</div>
+						<div class='image_box'>
+							<img v-bind:src="b.arr()[1]">
+						</div>
+						<div class='list_box'>
+							<ul>
+								<li v-for="n in b.arr()[2]"> {{n}}</li>
+								<li v-if="b.arr()[3]"> Contains <span class="best">gluten</span></li>
+							</ul>
+						</div>
+						<div>
+							<input type='checkbox' v-bind:id="b.arr()[0]" name="burger_checkbox">
+						</div>
 					</div>
 				</div>
 			</section>
@@ -91,7 +77,7 @@
 					<p>
 						<label>Vilken är din favoritfärg?</label>
 						<div>
-						  <input type="radio" id="cred" name="fav_color" value="cred" required="required">
+						  <input type="radio" id="cred" name="fav_color" value="cred" required="required" checked="checked">
 						  <label for="cred">Röd</label>
 						</div>
 						<div>
@@ -116,9 +102,14 @@
 						</div>
 					</p>
 					<p>
-						<button type="submit"><img src="https://openclipart.org/download/220795/Bat-Silhouette.svg"> Send Info</button>
+						<button id="done_button" type="submit" v-on:click="clicked()"><img src="https://openclipart.org/download/220795/Bat-Silhouette.svg"> Send Info</button>
 					</p>
 				</form>
+				<div id='submit_message'>
+					<p v-for="a in form_choice">
+						{{a}}
+					</p>
+				</div>
 			</section>
 	 
 		</main>

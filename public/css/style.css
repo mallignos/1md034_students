@@ -24,12 +24,8 @@ h2 {
 	/*font-family: papyrus;*/
 }
 
-#table_headers {
-	font-family: 'arial',serif;
-	font-size: 1.5em;
-}
 
-#best {
+.best {
 	text-decoration: underline;
 	font-weight: bold;
 }
@@ -51,15 +47,7 @@ h2 {
     cursor: pointer;
 }
 
-#burger_select #box_table {
-	text-align: center;
-	width: 60%;
-}
 
-#burger_select #box_table ul {
-	display: inline-block;
-	text-align: left;
-}
 
 section {
 	margin: 2.5em;
@@ -74,7 +62,7 @@ header {
 
 header h1 {
 	position: absolute;
-	margin-top: -19.5em;
+	margin-top: -50%;
 }
 
 header img {
@@ -85,21 +73,39 @@ header img {
 	top:-29em;
 }
 
-#box_table img {
-	width:100%;
-	height: auto;
+
+
+#burger_select .burger_item {
+	display: inline-block;
+	width: 17em;
+    border-radius: 0.3em;
+    margin-left: 1em;
+    padding: 0em;
+    vertical-align: top;
 }
 
-.wrapper {
-     display: grid;
-     grid-gap: 0.3em;
-     grid-template-columns: 17em 17em 17em;
- }
 
-.box {
-     border-radius: 0.3em;
-     margin-left: 1em;
-     padding: 0em;
+#burger_select .burger_item * {
+	width: 100%;
+}
+
+#burger_select .burger_item .table_header {
+	font-family: 'arial',serif;
+	font-size: 1.5em;
+}
+
+#burger_select .burger_item {
+	text-align: center;
+}
+
+
+#burger_select .burger_item .image_box {
+	height: 12em
+}
+
+#burger_select .burger_item ul {
+	display: inline-block;
+	text-align: left;
 }
 
 
